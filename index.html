@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BitJs</title>
+    <link rel="stylesheet" href="./lib/iconfont.css">
+    <link rel="stylesheet" href="./lib/bit.css">
+    <script type="text/javascript" src="./lib/zepto.js"></script>
+    <script type="text/javascript" src="./lib/fastclick.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="bit-header">
+            <span class="bit-header-title">页面的标题</span>
+        </div>
+    </header>
+    <div class="bit-content">
+        <div style="width: 200px;height: 40px;margin: 5px auto">
+            <a class="bit-button color-deafult cs1" href="javascript:void(0);"> 测试alert</a>
+        </div>
+        <div style="width: 200px;height: 40px;margin: 5px auto">
+            <a class="bit-button color-deafult cs2" href="javascript:void(0);"> 测试loading</a>
+        </div>
+        <div style="width: 200px;height: 40px;margin: 5px auto">
+            <a class="bit-button color-deafult cs3" href="javascript:void(0);"> 测试http</a>
+        </div>
+        <div class="bit-grid">
+            <div class="bit-col-3">
+                <a href="javascript:void(0);">
+                    <i class="icon wx-zhuanyi"></i>
+                    <span>转移登记</span>
+                </a>
+            </div>
+            <div class="bit-col-3">
+                <a href="javascript:void(0);">
+                    <i class="icon wx-zhuanyi"></i>
+                    <span>转移登记</span>
+                </a>
+            </div>
+            <div class="bit-col-3">
+
+            </div>
+        </div>
+        <div class="bit-title">
+            <span class="b-span">业务类</span>
+            <div class="bit-title-r">
+                <a class="bit-title-a" href="javascript:void(0)">
+                    <i class="icon iconfont icon-minus-circle-fill"></i>
+                    <span>删除</span>
+                </a>
+                <a class="bit-title-a" href="javascript:void(0)">
+                    <i class="icon iconfont icon-scan"></i>
+                    <span>扫描</span>
+                </a>
+            </div>
+        </div>
+        <div class="bit-items">
+            <div class="bit-item">
+                <div class="bit-item-l">
+                    <span class="bit-item-t bt">房屋坐落</span>
+                    <span>:</span>
+                </div>
+                <div class="bit-item-r">
+                    <span>成都市武侯区长益侯区长益路蓝海OFFICE C座1202</span>
+                </div>
+            </div>
+            <div class="bit-item">
+                <div class="bit-item-l">
+                    <span class="bit-item-t bt">身份证号码</span>
+                    <span>:</span>
+                </div>
+                <div class="bit-item-r">
+                    <bit-input></bit-input>
+                    <a class="code-a" href="javascript:void(0)"><i class="icon iconfont icon-eye-fill"></i></a>
+                </div>
+            </div>
+            <div class="bit-item">
+                <div class="bit-item-l">
+                    <span class="bit-item-t bt">输入适高</span>
+                    <span>:</span>
+                </div>
+                <div class="bit-item-r">
+                    <bit-input bitautoheight inputval="123"></bit-input>
+                </div>
+            </div>
+            <div class="bit-item">
+                <div class="bit-item-l">
+                    <span class="bit-item-t bt">输入验证</span>
+                    <span>:</span>
+                </div>
+                <div class="bit-item-r">
+                    <bit-input bitvalidate="mobile" inputval="13880605025"></bit-input>
+                </div>
+            </div>
+            <div class="bit-item">
+                <div class="bit-item-l">
+                    <span class="bit-item-t bt">选择1</span>
+                    <span>:</span>
+                </div>
+                <div class="bit-item-r">
+                    <bit-select class="cs11" selectkey="1111" selectval="光大银行"></bit-select>
+                </div>
+            </div>
+            <div class="bit-item">
+                <div class="bit-item-l">
+                    <span class="bit-item-t bt">选择2</span>
+                    <span>:</span>
+                </div>
+                <div class="bit-item-r">
+                    <bit-select class="cs22"></bit-select>
+                </div>
+            </div>
+
+            <div class="bit-item">
+                <div class="bit-item-l">
+                    <span class="bit-item-t bt">日期</span>
+                    <span>:</span>
+                </div>
+                <div class="bit-item-r">
+                    <bit-date bitmin='2019-07-26'></bit-date>
+                </div>
+            </div>
+            <div class="bit-item">
+                <div class="bit-item-l">
+                    <span class="bit-item-t bt">验证码</span>
+                    <span>:</span>
+                </div>
+                <div class="bit-item-r">
+                    <bit-input></bit-input>
+                    <a class="code-a" href="javascript:void(0)">获取验证码</a>
+                </div>
+            </div>
+            <bit-linkage class="linkage1"></bit-linkage>
+            <div class="bit-item">
+                    <div class="bit-item-l">
+                        <span class="bit-item-t bt">图形验证码</span>
+                        <span>:</span>
+                    </div>
+                    <div class="bit-item-r">
+                        <bit-input></bit-input>
+                        <a class="code-b" href="javascript:void(0)">
+                            <img src="http://mytt.mas.gov.cn/mitt-ui/mobileController/getvalicode?d=123" alt="">
+                        </a>
+                    </div>
+                </div>
+    
+        </div>
+        <div class="upload-div" bitupload="ss(res)" bitaccept="image/*" bitcapture="camera" style="width:80px;height:80px;margin:0 auto;border:1px solid red;display: flex;justify-content: center;align-items: center">
+            <i class="icon iconfont icon-plus-circle" style="font-size: 40px;"></i>
+        </div>
+        <div style="width: 100%;height: 250px;">
+            <img class="csimg" style="width: 100%;height: 100%;">
+        </div>
+    </div>
+    <footer>
+        <div class="bit-footer">
+            <a class="bit-button csbtn color-deafult" href="javascript:void(0);">页面按钮</a>
+        </div>
+    </footer>
+    
+
+    <script type="text/javascript">
+        window['bitconfig'] = {
+            getBaseUrl: () => {
+                return "http://218.6.151.173:8081/mitt-ui";
+                //return "http://www.xcbdc.org.cn/mitt-ui";
+            },
+            goLoginFn: () => {
+                console.log('去登陆');
+            }
+        }
+        $(function () {
+            FastClick.attach(document.body);
+        });
+    </script>
+    <script type="text/javascript" src="./lib/bit.js"></script>
+    <script type="text/javascript">
+        $.bitloading.show('页面初始化中');
+        $(function () {
+            
+
+            $.bitinit();
+            $.bitloading.miss();
+            $.bitrender();
+
+            $('.cs1').click(() => {
+                $.bitalerts.alert('此功能还在开发中,试试别的')
+            })
+            $('.cs2').click(() => {
+                $.bitloading.show('验证码验证中1');
+                setTimeout(() => {
+                    $.bitloading.miss();
+                }, 3000)
+            })
+            $('.cs3').click(async () => {
+                $.bitloading.show();
+                $.bithttp.post('/user/login', {
+                    account: '13880605025',
+                    password: '123456'
+                }, (res) => {
+                    console.log(111)
+                    $.bitloading.miss();
+                }, err => {
+                    $.bitalerts.alert(err)
+                });
+                console.log(2222)
+
+            })
+
+            var selectOption1 = [{
+                dicKey: '1111',
+                dicValue: '光大银行'
+            }, {
+                dicKey: '2222',
+                dicValue: '这个银行'
+            }];
+            var selectOption2;
+            
+
+            $('.cs11').bitselect(selectOption1);
+
+            //this.imgCodeSrc = 'http://mytt.mas.gov.cn/mitt-ui/mobileController/getvalicode?d=' + new Date().getSeconds();
+
+            $('.csbtn').on('click', function () {
+                $.bitimgView([{
+                url:'./imgs/lunbo1.png',
+                title:'关联人1'
+            },{
+                url:'./imgs/lunbo2.png',
+                title:'关联人2'
+            },{
+                url:'./imgs/lunbo3.jpg',
+                title:'关联人3'
+            }],3);
+
+            })
+
+            var linkDatas = [{
+                "options": [{
+                    "text": "北京市",
+                    "value": "北京市"
+                }, {
+                    "text": "天津市",
+                    "value": "天津市"
+                }, {
+                    "text": "山西省",
+                    "value": "山西省"
+                }]
+            }, {
+                "options": [{
+                    "parentVal": "天津市",
+                    "xzqhxh": "2977",
+                    "text": "红桥区",
+                    "value": "红桥区"
+                }, {
+                    "parentVal": "天津市",
+                    "xzqhxh": "2978",
+                    "text": "滨海区",
+                    "value": "滨海区"
+                }, {
+                    "parentVal": "北京市",
+                    "xzqhxh": "2980",
+                    "text": "西城区",
+                    "value": "西城区"
+                }, {
+                    "parentVal": "北京市",
+                    "xzqhxh": "2983",
+                    "text": "顺义区",
+                    "value": "顺义区"
+                }, {
+                    "parentVal": "山西省",
+                    "xzqhxh": "2983",
+                    "text": "太原市",
+                    "value": "太原市"
+                }, {
+                    "parentVal": "山西省",
+                    "xzqhxh": "2983",
+                    "text": "大同市",
+                    "value": "大同市"
+                }, {
+                    "parentVal": "山西省",
+                    "xzqhxh": "2983",
+                    "text": "运城市",
+                    "value": "运城市"
+                }]
+            }]
+            $('.linkage1').bitlinkage(linkDatas,'省/直辖市_市/区');
+        })
+    </script>
+
+
+
+</body>
+
+</html>

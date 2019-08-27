@@ -1,0 +1,1217 @@
+/***重置样式***/
+ul,
+li,
+a,
+p,
+div,
+i,
+span,
+button,input,textarea {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    background: transparent;
+    outline: none;
+    border: none;
+    touch-action: pan-y;
+}
+a,a:hover,a:active,a:visited,a:link,a:focus{
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+    outline:none;
+    background: none;
+    text-decoration: none;
+    color: initial;
+}
+html {
+    width: 100%;
+    min-width: 320px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+body {
+    width: 100%;
+    min-width: 320px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 1.6rem;
+    overflow: hidden;
+    position: relative;
+}
+
+textarea::-webkit-input-placeholder{
+    color: #888;
+    font-size: 1.6rem;
+    letter-spacing: 1.5px;
+    white-space: nowrap;
+    font-weight: 500;
+}
+
+/**通用**/
+bit-input,bit-select,bit-date,bit-link{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+
+.scroll-y {
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.bit-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    border-radius: 7px;
+}
+.bit-button.color-deafult{
+    color: #fff;
+    background: -webkit-linear-gradient(to left,#4ad3fa,#279ef4);
+    background: -ms-linear-gradient(to right,#4ad3fa,#279ef4);
+    background: -o-linear-gradient(to right,#4ad3fa,#279ef4);
+    background: -moz-linear-gradient(to right,#4ad3fa,#279ef4);
+    background: linear-gradient(to right,#4ad3fa,#279ef4);
+}
+.color-ok {
+    color: #488aff !important;
+}
+
+.color-cancel {
+    color: #f55f41 !important;
+}
+
+.y-line {
+    display: inline-block;
+    min-width: 1px;
+    max-width: 1px;
+    background-color: #dbdbdb;
+    height: 100%;
+}
+.bit-scale-in-animation {
+    animation: bitScaleInAnimation .3s ease;
+    -ms-animation: bitScaleInAnimation .3s ease;
+    -moz-animation: bitScaleInAnimation .3s ease;
+    -webkit-animation: bitScaleInAnimation .3s ease;
+    -o-animation: bitScaleInAnimation .3s ease;
+}
+.bit-bottom-in-animation {
+    animation: bitBottomInAnimation .3s ease;
+    -ms-animation: bitBottomInAnimation .3s ease;
+    -moz-animation: bitBottomInAnimation .3s ease;
+    -webkit-animation: bitBottomInAnimation .3s ease;
+    -o-animation: bitBottomInAnimation .3s ease;
+}
+
+/**end**/
+.bit-modal-background {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bit-modal-background-transparent {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 7;
+}
+.bit-date-modal-background-transparent {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .6);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+
+/**bit-alert**/
+.bit-alerts-modal {
+    z-index: 9;
+}
+
+.bit-alerts-container {
+    max-width: 80%;
+    min-width: 250px;
+    background: #fff;
+    max-height: 300px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.bit-alerts-container .bit-alerts-header {
+    width: 100%;
+    padding: 5px 10px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bit-alerts-container .bit-alerts-header>span {
+    font-size: 18px;
+    letter-spacing: 3px;
+    color: #888;
+    white-space: nowrap;
+    font-weight: 400;
+}
+
+.bit-alerts-container .bit-alerts-content {
+    width: 100%;
+    padding: 0 10px;
+    max-height: 150px;
+}
+
+.bit-alerts-container .bit-alerts-content>span {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    min-height: 30px;
+    line-height: 30px;
+    letter-spacing: 1px;
+}
+
+.bit-alerts-container .bit-alerts-footer {
+    width: 100%;
+    padding: 0 10px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    border-top: 1px solid #dbdbdb;
+    flex-wrap: nowrap;
+}
+
+.bit-alerts-container .bit-alerts-footer .color-ok{
+    font-weight: 600;
+}
+
+.bit-toast-container {
+    width: 100%;
+    padding: 0 5px;
+    position: relative;
+    top: 5px;
+    animation: bitToastAnimation .4s ease;
+    -ms-animation: bitToastAnimation .4s ease;
+    -moz-animation: bitToastAnimation .4s ease;
+    -webkit-animation: bitToastAnimation .4s ease;
+    -o-animation: bitToastAnimation .4s ease;
+}
+
+.bit-toast-container .bit-toast-dv {
+    padding: 2px 20px;
+    line-height: 35px;
+    height: 40px;
+    background: rgba(0, 0, 0, .6);
+    border-radius: 5px;
+    margin: 0 5px;
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 2px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+/**bit-loading**/
+.bit-loading-modal {
+    z-index: 8;
+}
+
+.bit-loading-container {
+    width: 80%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    margin-top: -30px;
+}
+
+.bit-loading-container .bit-loading-icon {
+    width: 60px;
+    height: 25px;
+}
+
+.bit-loading-container .bit-loading-icon img {
+    width: 100%;
+    height: 100%;
+}
+
+.bit-loading-container .bit-loading-text {
+    line-height: 30px;
+    letter-spacing: 2px;
+    margin-top: 10px;
+}
+
+.bit-loading-container .bit-loading-text>span {
+    position: relative;
+    display: inline-block;
+    height: 30px;
+    padding-right: 30px;
+    margin-left: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #fff;
+}
+
+.bit-loading-container .bit-loading-text>span::after {
+    content: '...';
+    position: absolute;
+    top: 0;
+    left: calc(100% - 28px);
+    height: 100%;
+    display: flex;
+    z-index: 10;
+    align-items: flex-end;
+    font-size: 25px;
+    animation: loadmarkAnimation 1.5s linear .5s infinite;
+    -ms-animation: loadmarkAnimation 1.5s linear .5s infinite;
+    -moz-animation: loadmarkAnimation 1.5s linear .5s infinite;
+    -webkit-animation: loadmarkAnimation 1.5s linear .5s infinite;
+    -o-animation: loadmarkAnimation 1.5s linear .5s infinite;
+}
+/**bit-imgview**/
+.bit-imgview-modal{
+    z-index: 7;
+    background: rgba(0, 0, 0, .8);
+}
+.bit-imgview-title{
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    line-height: 50px;
+    text-align: center;
+    letter-spacing: 4px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.bit-imgview-title .bit-imgview-title-count{
+    flex: 1;
+    padding: 0 10px;
+    padding-left: 70px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.bit-imgview-title .bit-imgview-title-close{
+    width: 60px;
+    min-width: 60px;
+}
+.bit-imgview-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.bit-imgview-container .bit-imgview-div{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    transform: translateX(-100%);
+}
+.bit-imgview-container .bit-imgview-div .img-div{
+    min-width: 100%;
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.bit-imgview-container .bit-imgview-div .img-div .gl-span{
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10%;
+    background: rgba(0,0,0,.5);
+    color: #fff;
+    letter-spacing: 1.5px;
+    font-size: 1.4rem;
+    z-index: 7;
+}
+.bit-imgview-container .bit-imgview-div .img-div img{
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+}
+
+/**bit-header bit-footer bit-content**/
+.bit-header{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    letter-spacing: 2px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    padding: 1px 35px;
+    z-index: 1;
+}
+.bit-header .bit-header-title{
+    display: inline-block;
+    width: 100%;
+    line-height: 35px;
+    height: 35px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-align: center;
+}
+.bit-footer{
+    width: 100%;
+    position: relative;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 2px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    padding: 0 16px;
+    padding-bottom: 9px;
+    padding-top: 1px;
+    z-index: 1;
+}
+.bit-content{
+    background-color: #fafafa;
+    height: 100%;
+    overflow: scroll;
+    width: calc(100% + 10px);
+    padding: 5px 0;
+    padding-right: 10px;
+    position: relative;
+    font-size: 1.6rem;
+}
+
+/**bit-grid**/
+.bit-grid{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap:wrap; 
+    background-color: #fff;
+    overflow: hidden;
+}
+.bit-grid>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5px;
+    border-right: 1px solid #efefef;
+    border-top: 1px solid #efefef;
+    margin-top: -1px;
+}
+.bit-grid>div>a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.bit-grid>div>a .icon{
+    width: 40%;
+    height: 40%;
+}
+.bit-grid>div>a span{
+    font-size: inherit;
+    letter-spacing: 1px;
+    margin-top: 5px;
+    display: inline-block;
+    height: 32px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    line-height: 16px;
+    padding: 0 5px;
+}
+.bit-col-3{
+    width: 33.3%;
+    max-width: 33.3%;
+    height: 30vw;
+    font-size: 14px;
+}
+.bit-col-4{
+    font-size: 13px;
+    width: 25%;
+    max-width: 25%;
+    height: 25vw;
+}
+
+/**bit-title**/
+.bit-title{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 35px;
+    line-height: 3.5rem;
+}
+.bit-title .b-span{
+    position: relative;
+    letter-spacing: 2px;
+    font-weight: 600;
+    font-size: 1.7rem;
+    margin-left: 10px;
+}
+.bit-title .b-span::before{
+    content: '';
+    position: absolute;
+    display: inline-block;
+    width: 4px;
+    height: 2.5rem;
+    top: .5rem;
+    left: -8px;
+    background: -webkit-linear-gradient(#4ad3fa,#279ef4);
+    background: -ms-linear-gradient(#4ad3fa,#279ef4);
+    background: -o-linear-gradient(#4ad3fa,#279ef4);
+    background: -moz-linear-gradient(#4ad3fa,#279ef4);
+    background: linear-gradient(#4ad3fa,#279ef4);
+}
+.bit-title .bit-title-r{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bit-title .bit-title-r .bit-title-a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 8px 2px 10px;
+    border: 1px solid #488aff;
+    border-radius: 10px;
+    height: 2.3rem;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+   margin-right: 10px;
+}
+.bit-title .bit-title-r .icon{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 3px;
+    font-size: 1.8rem;
+}
+
+/**bit-items**/
+.bit-items{
+    position: relative;
+    width: 100%;
+    min-height: 4rem;
+}
+.bit-items .bit-item{
+    width: 100%;
+    padding:8px 2px 8px 11px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: #fff;
+}
+.bit-items .bit-item .bit-item-l{
+    white-space: nowrap;
+    margin-right: 1rem;
+    padding: 2px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    color: #555;
+    font-weight: 500;
+}
+.bit-items .bit-item .bit-item-l .bit-item-t{
+    min-width: 90px;
+    text-align: justify;
+    text-align-last: justify;
+    display: inline-block;
+    line-height: 2rem;
+    position: relative;
+    letter-spacing: 1.5px;
+}
+.bit-items .bit-item .bit-item-l .bit-item-t.bt::before{
+    content: '*';
+    position: absolute;
+    color: red;
+    left: -9px;
+    font-size: 18px;
+    font-weight: 600;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    line-height: 2.7rem;
+}
+.bit-items .bit-item .bit-item-l>span:last-child{
+    display: inline-block;
+    width: 4px;
+    text-align: center;
+    height: 2rem;
+}
+.bit-items .bit-item .bit-item-r{
+    letter-spacing: 1.5px;
+    min-height: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+.bit-items .bit-item .bit-item-r>span{ 
+    line-height: 2rem;
+    word-wrap: break-word;
+    padding: 2px 0;
+}
+.bit-items .bit-item .bit-item-r>span.placeholder{
+    color: #888;
+}
+.bit-items .bit-item .bit-item-r .code-a{
+    line-height: 2rem;
+    white-space: nowrap;
+    padding: 0 10px;
+    color: #488aff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+}
+.bit-items .bit-item .bit-item-r .code-b{
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10.5rem;
+    overflow: visible;
+    margin: 0 0.5rem;
+}
+.bit-items .bit-item .bit-item-r .code-b>img{
+    width: 10.5rem;
+    height: 3.8rem;
+}
+
+/**bit-input-com**/
+.bit-input-com{
+    width: 100%;
+    height: 100%;
+    padding: 2px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.bit-input-com>textarea{
+    width: 100%;
+    height: 2rem;
+    min-height: 2rem;
+    font-size: 1.6rem;
+    letter-spacing: 1.5px;
+    font-family: inherit;
+    resize: none;
+    overflow-y:visible;
+    line-height: 2rem;
+}
+/**bit-select-com**/
+.bit-select-com{
+    width: 100%;
+    height: 100%;
+    padding: 2px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+.bit-select-com>span{
+    width: 100%;
+    line-height: 2rem;
+}
+.bit-select-com>span.palceholder {
+    color: #888;
+}
+.bit-select-com>.icon{
+    width: 2rem;
+    min-width: 2rem;
+    height: 2rem;
+    color: #888;
+    font-size: 2rem;
+}
+.bit-select-modal{
+    z-index: 7;
+}
+.bit-select-container {
+    width: 80%;
+    min-height:80px;
+    max-height: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    margin-top: -30px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.bit-select-container .bit-select-title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.5rem;
+}
+.bit-select-container .bit-select-title>span{
+    display: inline-block;
+    width: 100%;
+    line-height: 3.5rem;
+    text-align: center;
+    padding: 0 30px;
+    letter-spacing: 1.5px;
+    color: #888;
+    font-size: 1.7rem;
+    font-weight: 500;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    border-bottom: 1px solid #f2f2f2;
+}
+.bit-select-container .bit-select-content{
+    width: 100%;
+    padding-bottom: 5px;
+    max-height: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+    position: relative;
+}
+.bit-select-container .bit-select-scroll{
+    width: 100%;
+    background-color: #fdfdfd;
+    position: relative;
+}
+.bit-select-container .bit-select-scroll .bit-select-tip{
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #888;
+    letter-spacing: 1.5px;
+}
+.bit-select-container .bit-select-option{
+    width: 100%;
+    min-height: 4rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    padding: 1rem 2rem;
+    margin: 2px 0;
+    background-color: #fff;
+    position: relative;
+}
+.bit-select-container .bit-select-option.active .bit-select-option-r{
+    color: #488aff;
+}
+.bit-select-container .bit-select-option.active .bit-select-option-l .icon{
+    color: #488aff;
+}
+
+.bit-select-container .bit-select-option .bit-select-option-l{
+    width: 2rem;
+    min-width: 3rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+}
+.bit-select-container .bit-select-option .bit-select-option-l .icon{
+    width: 3rem;
+    height: 3rem;
+    font-size: 2.7rem;
+    color: #9a9a9a;
+}
+.bit-select-container .bit-select-option .bit-select-option-r{
+    letter-spacing: 1.5px;
+    line-height: 2rem;
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+
+/**bit-date-com**/
+.bit-date-com{
+    width: 100%;
+    height: 100%;
+    padding: 2px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+.bit-date-com>span{
+    width: 100%;
+    line-height: 2rem;
+}
+.bit-date-com>span.palceholder {
+    color: #888;
+}
+.bit-date-com>.icon{
+    width: 2rem;
+    min-width: 2rem;
+    height: 2rem;
+    color: #888;
+    font-size: 2rem;
+}
+.bit-date-modal{
+    z-index: 7;
+}
+.bit-date-container {
+    width: 100%;
+    height: 230px;
+    background-color: #fff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+}
+.bit-date-container .date_btn_div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50px;
+    max-height: 50px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+.bit-date-container .date_btn_div a{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 2px;
+
+}
+.bit-date-container .date_select_div{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    position: relative;
+}
+.bit-date-container .date_select_div::before{
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    background: rgba(255, 255, 255, .8);
+    border-bottom: 1px solid #ccc;
+}
+.bit-date-container .date_select_div::after{
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, .8);
+    border-top: 1px solid #ccc;
+}
+.bit-date-container .date_select_div .date_scroll_div{
+    max-width: 100%;
+    min-width: 70px;
+    height: 100%;
+    margin: 0 10px;
+    overflow: hidden;
+}
+.bit-date-container .date_select_div .date_scroll_div .date_select_col{
+    width: calc(100% + 17px);
+    padding-right: 17px;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.bit-date-container .date_select_div .date_scroll_div .date_select_col .date_select_content{
+    width: 100%;
+    min-height: 100%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.bit-date-container .date_select_div .date_scroll_div .date_select_col .date_select_content .date_select_opt{
+    width: 100%;
+    min-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bit-date-container .date_select_div .scroll_div{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+.bit-date-container .date_select_div .scroll_div>div{
+    max-width: 100%;
+    min-width: 70px;
+    height: 100%;
+    margin: 0 10px;
+}
+
+/**动画**/
+
+/**loading ...的动画**/
+@keyframes loadmarkAnimation {
+    0% {
+        content: '.';
+    }
+
+    50% {
+        content: '..';
+    }
+
+    100% {
+        content: '...';
+    }
+}
+@-ms-keyframes loadmarkAnimation {
+    0% {
+        content: '.';
+    }
+
+    50% {
+        content: '..';
+    }
+
+    100% {
+        content: '...';
+    }
+}
+
+@-moz-keyframes loadmarkAnimation {
+    0% {
+        content: '.';
+    }
+
+    50% {
+        content: '..';
+    }
+
+    100% {
+        content: '...';
+    }
+}
+
+@-webkit-keyframes loadmarkAnimation {
+    0% {
+        content: '.';
+    }
+
+    50% {
+        content: '..';
+    }
+
+    100% {
+        content: '...';
+    }
+}
+
+@-o-keyframes loadmarkAnimation {
+    0% {
+        content: '.';
+    }
+
+    50% {
+        content: '..';
+    }
+
+    100% {
+        content: '...';
+    }
+}
+
+/**toast 动画**/
+@keyframes bitToastAnimation {
+    from {
+        top: -45px;
+    }
+
+    to {
+        top: 5px;
+    }
+}
+@-ms-keyframes bitToastAnimation {
+    from {
+        top: -45px;
+    }
+
+    to {
+        top: 5px;
+    }
+}
+
+@-moz-keyframes bitToastAnimation {
+    from {
+        top: -45px;
+    }
+
+    to {
+        top: 5px;
+    }
+}
+
+@-webkit-keyframes bitToastAnimation {
+    from {
+        top: -45px;
+    }
+
+    to {
+        top: 5px;
+    }
+}
+
+@-o-keyframes bitToastAnimation {
+    from {
+        top: -45px;
+    }
+
+    to {
+        top: 5px;
+    }
+}
+
+/**scaleIn 动画**/
+@keyframes bitScaleInAnimation {
+    from {
+        transform:scale(0);
+        -ms-transform:scale(0);
+        -moz-transform:scale(0);
+        -webkit-transform:scale(0);
+        -o-transform:scale(0);
+    }
+    to {
+        transform:scale(1);
+        -ms-transform:scale(1);
+        -moz-transform:scale(1);
+        -webkit-transform:scale(1);
+        -o-transform:scale(1);
+    }
+}
+@-ms-keyframes bitScaleInAnimation {
+    from {
+        transform:scale(0);
+        -ms-transform:scale(0);
+        -moz-transform:scale(0);
+        -webkit-transform:scale(0);
+        -o-transform:scale(0);
+    }
+    to {
+        transform:scale(1);
+        -ms-transform:scale(1);
+        -moz-transform:scale(1);
+        -webkit-transform:scale(1);
+        -o-transform:scale(1);
+    }
+}
+
+@-moz-keyframes bitScaleInAnimation {
+    from {
+        transform:scale(0);
+        -ms-transform:scale(0);
+        -moz-transform:scale(0);
+        -webkit-transform:scale(0);
+        -o-transform:scale(0);
+    }
+    to {
+        transform:scale(1);
+        -ms-transform:scale(1);
+        -moz-transform:scale(1);
+        -webkit-transform:scale(1);
+        -o-transform:scale(1);
+    }
+}
+
+@-webkit-keyframes bitScaleInAnimation {
+    from {
+        transform:scale(0);
+        -ms-transform:scale(0);
+        -moz-transform:scale(0);
+        -webkit-transform:scale(0);
+        -o-transform:scale(0);
+    }
+    to {
+        transform:scale(1);
+        -ms-transform:scale(1);
+        -moz-transform:scale(1);
+        -webkit-transform:scale(1);
+        -o-transform:scale(1);
+    }
+}
+
+@-o-keyframes bitScaleInAnimation {
+    from {
+        transform:scale(0);
+        -ms-transform:scale(0);
+        -moz-transform:scale(0);
+        -webkit-transform:scale(0);
+        -o-transform:scale(0);
+    }
+    to {
+        transform:scale(1);
+        -ms-transform:scale(1);
+        -moz-transform:scale(1);
+        -webkit-transform:scale(1);
+        -o-transform:scale(1);
+    }
+}
+
+/**bottomIn 动画**/
+@keyframes bitBottomInAnimation {
+    from {
+        bottom: -10%;
+    }
+    to {
+        bottom: 0;
+    }
+}
+@-ms-keyframes bitBottomInAnimation {
+    from {
+        transform:scale(0);
+        -ms-transform:scale(0);
+        -moz-transform:scale(0);
+        -webkit-transform:scale(0);
+        -o-transform:scale(0);
+    }
+    to {
+        transform:scale(1);
+        -ms-transform:scale(1);
+        -moz-transform:scale(1);
+        -webkit-transform:scale(1);
+        -o-transform:scale(1);
+    }
+}
+
+@-moz-keyframes bitBottomInAnimation {
+    from {
+        transform:scale(0);
+        -ms-transform:scale(0);
+        -moz-transform:scale(0);
+        -webkit-transform:scale(0);
+        -o-transform:scale(0);
+    }
+    to {
+        transform:scale(1);
+        -ms-transform:scale(1);
+        -moz-transform:scale(1);
+        -webkit-transform:scale(1);
+        -o-transform:scale(1);
+    }
+}
+
+@-webkit-keyframes bitBottomInAnimation {
+    from {
+        transform:scale(0);
+        -ms-transform:scale(0);
+        -moz-transform:scale(0);
+        -webkit-transform:scale(0);
+        -o-transform:scale(0);
+    }
+    to {
+        transform:scale(1);
+        -ms-transform:scale(1);
+        -moz-transform:scale(1);
+        -webkit-transform:scale(1);
+        -o-transform:scale(1);
+    }
+}
+
+@-o-keyframes bitBottomInAnimation {
+    from {
+        transform:scale(0);
+        -ms-transform:scale(0);
+        -moz-transform:scale(0);
+        -webkit-transform:scale(0);
+        -o-transform:scale(0);
+    }
+    to {
+        transform:scale(1);
+        -ms-transform:scale(1);
+        -moz-transform:scale(1);
+        -webkit-transform:scale(1);
+        -o-transform:scale(1);
+    }
+}
+
+
+
+/**图标**/
+.icon{
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wx-zhuanyi{
+    background-image: url('../imgs/icon-wx-zhuanyi.svg'); 
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
